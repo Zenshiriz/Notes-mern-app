@@ -10,6 +10,7 @@ import AddNote from "./component/AddNote";
 import EditNote from "./component/EditNote";
 import Login from "./component/Login";
 import SignUp from "./component/SignUp";
+import WelcomePage from "./component/WelcomePage";
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, color) => {
@@ -28,6 +29,8 @@ function App() {
           <NavbarComponent showAlert={showAlert} />
           <AlertComponent alert={alert}/>
           <Routes>
+
+            <Route exact path="/welcome" element={<WelcomePage showAlert={showAlert} />} />
             <Route exact path="/" element={<Home showAlert={showAlert} />} />
             <Route exact path="/addnote" element={<AddNote showAlert={showAlert} />} />
             <Route exact path="/editnote/:id" element={<EditNote showAlert={showAlert} />} />

@@ -10,10 +10,9 @@ export default function Notes(props) {
   const { notes,getAllNotes, setNotes} = context;
   useEffect(()=>{
     if(localStorage.getItem("token")){
-
       getAllNotes()
     }else{
-      navigate("/login");
+      navigate("/welcome");
     }
   },[])
   return (

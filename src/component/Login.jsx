@@ -36,7 +36,7 @@ export default function Login(props) {
     }
   };
   return (
-    <div className="py-4 min-h-[calc(100vh - 50px)] flex items-center">
+    <div className="py-4 h-full flex items-center">
       <Card color="transparent" shadow={false} className="max-w-fit mx-auto">
         <Typography variant="h4" color="blue-gray" className=" text-deep-purple-900">
           Login

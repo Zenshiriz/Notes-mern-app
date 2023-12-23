@@ -21,7 +21,7 @@ export default function NavbarComponent(props) {
   }, []);
   const handleLogOut = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    navigate("/welcome");
     props.showAlert("logged out Successfully", "green");
   };
   const navList = (
@@ -116,7 +116,7 @@ export default function NavbarComponent(props) {
                   <Button
                     variant=""
                     size="sm"
-                    className="hidden lg:inline-block bg-deep-purple-500"
+                    className="hidden lg:inline-block text-white bg-deep-purple-500"
                     onClick={() => navigate("/createuser")}
                   >
                     <span>Sign Up</span>
@@ -191,21 +191,21 @@ export default function NavbarComponent(props) {
             </div>
 
           ) : (
-            <div className="flex items-center gap-x-1">
+            <div className="flex items-center gap-x-1 pb-2 pl-2">
               <Button
                 fullWidth
                 variant="text"
                 size="sm"
-                className=""
+                className="outline-1 outline text-deep-purple-400 outline-deep-purple-400"
                 onClick={() => navigate("/login")}
               >
                 <span>Log In</span>
               </Button>
               <Button
                 fullWidth
-                variant="gradient"
+                variant=""
                 size="sm"
-                className=""
+                className=" text-white bg-deep-purple-500"
                 onClick={() => navigate("/createuser")}
               >
                 <span>Sign Up</span>
